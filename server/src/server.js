@@ -4,7 +4,7 @@ const app = require("./app");
 
 const { loadPlanetsData } = require("./models/planets.model");
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 
 const server = http.createServer(app);
 
@@ -17,3 +17,4 @@ async function startServer() {
 }
 
 startServer();
+//sudo killall -9 node

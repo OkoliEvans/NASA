@@ -15,7 +15,9 @@ function isHabitablePlanet(planet) {
 
 function loadPlanetsData() {
   return new Promise((resolve, reject) => {
-    fs.createReadStream(path.join(__dirname, '..', '..', 'data', "kepler_data.csv"))
+    fs.createReadStream(
+      path.join(__dirname, "..", "..", "data", "kepler_data.csv")
+    )
       .pipe(
         parse({
           comment: "#",
@@ -32,14 +34,17 @@ function loadPlanetsData() {
         reject(err);
       })
       .on("end", () => {
-
         console.log(`${habitablePlanets.length} habitable planets found`);
         resolve();
       });
   });
 }
 
+function getAllPlanets() {
+  return habitablePlanets;
+}
+
 module.exports = {
-    loadPlanetsData,
-  planets: habitablePlanets,
+  loadPlanetsData,
+  getAllPlanets,
 };
