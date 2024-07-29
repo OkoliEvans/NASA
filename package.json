@@ -11,7 +11,7 @@
     "client": "npm start --prefix nasa-front-end",
     "watch": "npm run server & npm run client",
     "deploy": "npm run build --prefix nasa-front-end && npm start --prefix server",
-    "test": "npm run test --prefix server && npm run test --prefix nasa-front-end"
+    "test": "npm test --prefix server && npm test --prefix nasa-front-end"
   },
   "repository": {
     "type": "git",
