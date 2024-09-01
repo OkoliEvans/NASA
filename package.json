@@ -11,6 +11,7 @@
     "client": "npm start --prefix nasa-front-end",
     "watch": "npm run server & npm run client",
     "deploy": "npm run build --prefix nasa-front-end && npm start --prefix server",
+    "deploy-cluster": "npm run build --prefix nasa-front-end && npm run cluster --prefix server",
     "test": "npm test --prefix server && npm test --prefix nasa-front-end"
   },
   "repository": {
@@ -23,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/OkoliEvans/NASA/issues"
   },
-  "homepage": "https://github.com/OkoliEvans/NASA#readme"
+  "homepage": "https://github.com/OkoliEvans/NASA#readme",
+  "dependencies": {
+    "mongoose": "^8.5.3"
+  }
 }
